@@ -1,0 +1,150 @@
+{
+  "active_printer_id": "default",
+  "config_version": 11,
+  "dark_mode": true,
+  "display": {
+    "bed_mesh_render_mode": 0,
+    "dim_brightness": 30,
+    "dim_sec": 300,
+    "drm_device": "",
+    "gcode_3d_enabled": true,
+    "gcode_render_mode": 0,
+    "rotate": 0,
+    "sleep_sec": 600
+  },
+  "gcode_viewer": {
+    "shading_model": "phong",
+    "tube_sides": 4
+  },
+  "input": {
+    "calibration": {
+      "a": 1.0,
+      "b": 0.0,
+      "c": 0.0,
+      "d": 0.0,
+      "e": 1.0,
+      "f": 0.0,
+      "valid": false
+    },
+    "jitter_threshold": 5,
+    "scroll_limit": 10,
+    "scroll_throw": 25,
+    "touch_device": ""
+  },
+  "language": "en",
+  "led": {
+    "selected_strips": null
+  },
+  "log_path": "/tmp/helixscreen.log",
+  "printers": {
+    "default": {
+      "default_macros": {
+        "cooldown": "SET_HEATER_TEMPERATURE HEATER=extruder TARGET=0\nSET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=0",
+        "load_filament": {
+          "gcode": "LOAD_FILAMENT",
+          "label": "Load"
+        },
+        "macro_1": {
+          "gcode": "HELIX_CLEAN_NOZZLE",
+          "label": "Clean Nozzle"
+        },
+        "macro_2": {
+          "gcode": "HELIX_BED_MESH_IF_NEEDED",
+          "label": "Bed Level"
+        },
+        "unload_filament": {
+          "gcode": "UNLOAD_FILAMENT",
+          "label": "Unload"
+        }
+      },
+      "extra_sensors": {},
+      "fans": {
+        "chamber": "heater_fan chamber_fan",
+        "exhaust": "",
+        "hotend": "heater_fan hotend_fan",
+        "part": "fan_generic cooling_fan"
+      },
+      "filament_sensors": {
+        "master_enabled": true,
+        "sensors": [
+          {
+            "enabled": true,
+            "klipper_name": "filament_switch_sensor extruder_in",
+            "role": "runout",
+            "type": "switch"
+          }
+        ]
+      },
+      "hardware": {
+        "expected": [
+          "heater_bed",
+          "extruder",
+          "fan_generic cooling_fan",
+          "heater_fan hotend_fan",
+          "output_pin caselight",
+          "filament_switch_sensor extruder_in"
+        ],
+        "last_snapshot": {
+          "fans": [
+            "fan_generic auxiliary_cooling_fan",
+            "heater_fan SSR_Fan",
+            "heater_fan chamber_fan",
+            "heater_fan hotend_fan",
+            "fan_generic cooling_fan",
+            "controller_fan board_fan",
+            "temperature_fan CM4"
+          ],
+          "filament_sensors": [
+            "filament_switch_sensor extruder_in"
+          ],
+          "heaters": [
+            "heater_bed",
+            "heater_generic chamber",
+            "extruder"
+          ],
+          "leds": [
+            "output_pin caselight"
+          ],
+          "sensors": [
+            "temperature_sensor beacon_coil",
+            "temperature_fan CM4",
+            "temperature_sensor M8P",
+            "temperature_sensor Tool_Board",
+            "temperature_sensor Heater_Core"
+          ],
+          "timestamp": "2026-03-02T03:18:04Z"
+        },
+        "optional": []
+      },
+      "heaters": {
+        "bed": "heater_bed",
+        "hotend": "extruder"
+      },
+      "leds": {
+        "color_presets": null,
+        "last_brightness": null,
+        "last_color": null,
+        "led_on_at_start": null,
+        "macro_devices": null,
+        "selected": [],
+        "selected_strips": null,
+        "strip": "output_pin caselight"
+      },
+      "moonraker_api_key": false,
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": 7125,
+      "temp_sensors": {
+        "bed": "heater_bed",
+        "hotend": "extruder"
+      },
+      "type": "Qidi Plus 4",
+      "wizard_completed": true
+    },
+    "show_printer_switcher": false
+  },
+  "theme": {
+    "preset": 0
+  },
+  "wifi_expected": false,
+  "wizard_completed": true
+}
